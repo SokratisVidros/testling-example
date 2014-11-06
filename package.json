@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "b": "browserify test/test-sanity.js > www/bundle.js",
-    "c": "browserify test/test-sanity.js | testling",
-    "test": "npm run b && npm start",
-    "test-remote": "npm run c",
-    "start": "node node_modules/phonegap/bin/phonegap serve"
+    // "b": "browserify test/test-sanity.js > www/bundle.js",
+    // "c": "browserify test/test-sanity.js | testling",
+    // "test": "npm run b && npm start",
+    // "start": "node node_modules/phonegap/bin/phonegap serve"
+    "test": "tape test/*.js"
   },
   "testling": {
     "files": "test/*.js",
