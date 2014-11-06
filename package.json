@@ -5,12 +5,29 @@
   "main": "index.js",
   "scripts": {
     "b": "browserify test/test-sanity.js > www/bundle.js",
+    "c": "browserify test/test-sanity.js | testling",
     "test": "npm run b && npm start",
+    "test-remote": "npm run c",
     "start": "node node_modules/phonegap/bin/phonegap serve"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tape": "^3.0.2"
+    "tape": "^3.0.2",
+    "browserify": "~6.2.0",
+    "testling": "~1.7.1"
   }
 }

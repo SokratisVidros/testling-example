@@ -1,4 +1,3 @@
-
 var test = require('tape')
   , report = require('browserify-tape-spec')
 
